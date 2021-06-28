@@ -1,0 +1,25 @@
+.idea/
+.DS_Store
+venv/
+.git/
+.gitignore
+tests/
+docker-compose.yaml
+*.md
+
+build
+dist
+*.egg-info
+*.egg/
+*.pyc
+*.swp
+
+.tox
+.coverage
+html/*
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+
+# Compiled Documentation
+docs/_build

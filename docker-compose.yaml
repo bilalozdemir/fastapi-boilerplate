@@ -1,0 +1,14 @@
+# `TARGET_ENVIRONMENT` is enum: [dev, local, stage, test, prod]
+# This variable is going to be checked in the code
+version: '3.7'
+services:
+  service-blutv:
+    build:
+      context: .
+      dockerfile: Dockerfile # (Optional) To be explicit
+      target: ${TARGET_ENVIRONMENT:-prod} # Target build in specified Dockerfile
+      environment:
+        - ENVIRONMENT=${TARGET_ENVIRONMENT:-prod}
+      env_file:
+        - configs/.env
+        - configs/${TARGET_ENVIRONMENT:-prod}.env # To override `.env` with overriding ENV variables

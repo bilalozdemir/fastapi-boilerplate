@@ -1,0 +1,4 @@
+sanic==19.6.0
+motor==2.0.0
+jsonschema==3.0.1
+sanic-sentry==0.1.7
